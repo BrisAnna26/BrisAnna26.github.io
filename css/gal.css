@@ -1,0 +1,8 @@
+	@import url('https: //font.googleapis.com/css?family=lobster|Montserrat&display=swap');
+	*{
+		magin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Monserrat',sans-serif;
+		font-family: 'lobster',cursive;
+	}

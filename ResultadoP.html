@@ -1,0 +1,22 @@
+<?php
+    $codigo=$_POST['codigo'];
+    $nombre=$_POST['nombrep'];
+    $unidad=$_POST['unidad'];
+    $cantidad=$_POST['cantidad'];
+    $descripcion=$_POST['descripcion'];
+    $categoria=$_POST['categoria'];
+    $proveedor=$_POST['proveedor'];
+    $fecha=$_POST['fecha'];
+    $estado=$_POST['estado'];
+
+    //REALIZAR LA CONEXIÓN CON LA BASE DE DATOS
+    require_once('conexion.php');
+    $sql="INSERT INTO productos(codigo,nombre,unidad,cantidad,descripcion,categoria,proveedor,fecha,estado) VALUES(NULL,'$codigo','$nombre','$unidad','$cantidad','$descripcion','$categoria','$proveedor','$fecha','$estado')";
+    if (mysqli_query($conexion,$sql)){
+        header("Location:productos.php");
+    }else{
+        print ('LA INFORMACIÓN NO SE LOGRO INSERTAR' .mysqli_error($conexion).$sql);
+    }
+    
+?>
+

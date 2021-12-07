@@ -1,0 +1,10 @@
+<?php
+   $id= $_GET['id'];
+   require_once('conexion.php');
+   $sql="DELETE FROM registros WHERE id=$id";
+   if (mysqli_query($conexion,$sql)){
+      header("Location:admin.php");
+    }else{
+         print 'LA INFORMACIÓN NO SE LOGRÓ MODIFICAR '.mysqli_error().$sql;
+    }
+?>

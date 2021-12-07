@@ -1,0 +1,57 @@
+	@import url('https: //font.googleapis.com/css?family=lobster|Montserrat&display=swap');
+	*{
+		magin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Monserrat',sans-serif;
+		font-family: 'lobster',cursive;
+	}
+body{
+	background: url(https://www.xtrafondos.com/wallpapers/degradado-difuminado-azul-7935.jpg);
+			background-size: 170vw 260vh;
+		background-repeat: no-repeat;
+
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20em;
+	}
+	
+	.contenedor{
+		width: 250%;
+		max-width: 3000px;
+		text-align: center;
+	}
+	.contenedor h1{
+		font-size: 80px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(../assets/img/FondoT.jpg);
+		margin-bottom: 5px;
+		background-attachment: fixed;
+	}
+div.galeria{
+	margin: 20px 20 px;
+	box-shadow: 0 4px 8px 0 #ffffff, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	float: left;
+	width: 240;
+}
+
+div.galeria img{
+	width: 90%;
+	height: auto;
+}
+
+div.galeria:hover{
+	border: 1px solid lightcoral;
+	transform: rotate(-3deg);
+}
+
+div.pie{
+	text-align: center;
+	text-shadow: 2px 2px 5px purple;
+	padding: 10px;
+}
+

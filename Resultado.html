@@ -1,0 +1,18 @@
+<?php
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $email=$_POST['email'];
+    $usuario=$_POST['usuario'];
+    $password=$_POST['password'];
+
+    //REALIZAR LA CONEXIÓN CON LA BASE DE DATOS
+    require_once('conexion.php');
+    $sql="INSERT INTO registros(ID,Nombre,Apellidos,Email,Usuario,Contraseña) VALUES(NULL,'$nombre','$apellido','$email','$usuario','$password')";
+    if (mysqli_query($conexion,$sql)){
+        header("Location:admin.php");
+    }else{
+        print ('LA INFORMACIÓN NO SE LOGRO INSERTAR' .mysqli_error($conexion).$sql);
+    }
+    
+?>
+

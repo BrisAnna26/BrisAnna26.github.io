@@ -1,0 +1,19 @@
+<?php
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $email=$_POST['email'];
+    $usuario=$_POST['usuario'];
+    $password=$_POST['password'];
+     //REALIZAR LA CONEXIÓN CON LA BASE DE DATOS
+    require_once('conexion.php');
+    $id= $_GET['id'];
+    $sql="UPDATE regi SET nombre='$nombre',apellido='$apellido',email='$email',usuario='$usuario',password='$password' WHERE id=$id";
+    if (mysqli_query($conexion,$sql)){
+    	//print 'LA INFORMACIÓN SE INSERTÓ EXITOSAMENTE';
+        header("Location:admin.php");
+    }else{
+    	print 'LA INFORMACIÓN NO SE LOGRÓ MODIFICAR '.mysqli_error().$sql;
+    }
+
+  
+?>
